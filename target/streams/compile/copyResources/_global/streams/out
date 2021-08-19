@@ -1,0 +1,11 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/qrazumov/IdeaProjects/rest/conf/routes,/home/qrazumov/IdeaProjects/rest/target/scala-2.13/classes/routes)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/qrazumov/IdeaProjects/rest/conf/application.conf,/home/qrazumov/IdeaProjects/rest/target/scala-2.13/classes/application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/qrazumov/IdeaProjects/rest/conf/brands.routes,/home/qrazumov/IdeaProjects/rest/target/scala-2.13/classes/brands.routes)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/qrazumov/IdeaProjects/rest/conf/logback.xml,/home/qrazumov/IdeaProjects/rest/target/scala-2.13/classes/logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/qrazumov/IdeaProjects/rest/conf/mybatis/mybatis-config.xml,/home/qrazumov/IdeaProjects/rest/target/scala-2.13/classes/mybatis/mybatis-config.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/qrazumov/IdeaProjects/rest/conf/META-INF/persistence.xml,/home/qrazumov/IdeaProjects/rest/target/scala-2.13/classes/META-INF/persistence.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/qrazumov/IdeaProjects/rest/conf/mybatis/mappers/brand.xml,/home/qrazumov/IdeaProjects/rest/target/scala-2.13/classes/mybatis/mappers/brand.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/qrazumov/IdeaProjects/rest/conf/mybatis/mappers/model.xml,/home/qrazumov/IdeaProjects/rest/target/scala-2.13/classes/mybatis/mappers/model.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/qrazumov/IdeaProjects/rest/conf/mybatis/mappers/user.xml,/home/qrazumov/IdeaProjects/rest/target/scala-2.13/classes/mybatis/mappers/user.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/qrazumov/IdeaProjects/rest/conf/evolutions/default/1.sql,/home/qrazumov/IdeaProjects/rest/target/scala-2.13/classes/evolutions/default/1.sql)[0m

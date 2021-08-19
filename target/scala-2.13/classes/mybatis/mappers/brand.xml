@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="brands">
+
+    <select id="getBrands" resultType="models.Brand">
+        SELECT * FROM brands
+    </select>
+    <select id="getBrandByID" resultType="models.Brand" parameterType="long">
+        SELECT * FROM brands WHERE ID = #{id}
+    </select>
+    <update id="updateBrand" parameterType="models.Brand">
+        update brands set
+                          name = #{name},
+                          country = #{country}
+        where id = #{id}
+    </update>
+    <delete id="deleteBrandByID" parameterType="long">
+        DELETE FROM brands WHERE ID = #{id}
+    </delete>
+    <insert id="create" parameterType="models.Brand">
+        INSERT INTO BRANDS
+            (NAME, COUNTRY)
+        VALUES (#{name}, #{country});
+    </insert>
+</mapper>

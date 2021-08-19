@@ -1,0 +1,8 @@
+[0m[[0m[31merror[0m] [0m[0m/home/qrazumov/IdeaProjects/rest/app/Module.java:27:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   class JPAPostRepository[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class Module[0m
+[0m[[0m[31merror[0m] [0m[0mJPAPostRepository[0m
+[0m[[0m[31merror[0m] [0m[0m/home/qrazumov/IdeaProjects/rest/app/Module.java:27:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   class PostRepository[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class Module[0m
+[0m[[0m[31merror[0m] [0m[0mPostRepository[0m
