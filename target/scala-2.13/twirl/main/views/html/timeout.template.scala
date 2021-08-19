@@ -32,14 +32,14 @@ object timeout extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Ht
 Seq[Any](format.raw/*2.1*/("""<!DOCTYPE html>
 
 <html>
-  <head>
-    <title>Timeout Page</title>
-  </head>
-  <body>
-    <h1>Timeout Page</h1>
+    <head>
+        <title>Timeout Page</title>
+    </head>
+    <body>
+        <h1>Timeout Page</h1>
 
-    Database timed out, so showing this page instead.
-  </body>
+        Database timed out, so showing this page instead.
+    </body>
 </html>
 """))
       }
@@ -58,7 +58,7 @@ Seq[Any](format.raw/*2.1*/("""<!DOCTYPE html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/timeout.scala.html
-                  HASH: 707038bba0feefdaf13ea48563ac458cfde780c1
+                  HASH: ce5e83c765876670f8fab556cbe837c6aa738b60
                   MATRIX: 902->1|998->4
                   LINES: 27->1|32->2
                   -- GENERATED --

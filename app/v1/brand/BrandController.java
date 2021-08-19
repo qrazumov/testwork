@@ -29,7 +29,7 @@ public class BrandController extends Controller {
     public CompletionStage<Result> list(Http.Request request) {
         return handler.list(request).thenApplyAsync(brands -> {
             final List<Brand> brandList = brands.collect(Collectors.toList());
-            return ok( Json.toJson(brandList) );
+            return ok(Json.toJson(brandList));
         }, ec.current());
     }
 
@@ -58,13 +58,9 @@ public class BrandController extends Controller {
     }
 
     public CompletionStage<Result> create(Http.Request request) {
-        JsonNode json = request.body().asJson();
-        final Brand brand = Json.fromJson(json, Brand.class);
-        return handler.create(brand).thenApplyAsync(b -> created(Json.toJson(b)), ec.current());
+
+        return handler.create(request).thenApplyAsync(b -> created(Json.toJson(b)), ec.current());
     }
-
-
-
 
 
 }

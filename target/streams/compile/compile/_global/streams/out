@@ -1,8 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/qrazumov/IdeaProjects/rest/app/Module.java:27:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   class JPAPostRepository[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class Module[0m
-[0m[[0m[31merror[0m] [0m[0mJPAPostRepository[0m
-[0m[[0m[31merror[0m] [0m[0m/home/qrazumov/IdeaProjects/rest/app/Module.java:27:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   class PostRepository[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class Module[0m
-[0m[[0m[31merror[0m] [0m[0mPostRepository[0m
+[0m[[0m[31merror[0m] [0m[0m/home/qrazumov/IdeaProjects/rest/conf/models.routes:2:1: not enough arguments for method create: (x$1: play.mvc.Http.Request, x$2: String): java.util.concurrent.CompletionStage[play.mvc.Result].[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter x$2.[0m
+[0m[[0m[31merror[0m] [0m[0mPOST   /                     v1.model.ModelController.create(request:Request)[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

@@ -32,40 +32,41 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 Seq[Any](format.raw/*2.1*/("""<!doctype html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Play REST API</title>
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <title>Play REST API</title>
+    </head>
 
-  <body>
-    <h1>Play REST API</h1>
+    <body>
+        <h1>Play REST API</h1>
 
+        <p>
+            This is a placeholder page to show you the REST API.  Use <a href="https://httpie.org/">httpie</a>
+            to post JSON to the application.
+        </p>
+
+        <p>
+            To see all posts, you can do a GET:
+        </p>
+
+
+        <pre>
+            <code>http GET localhost:9000/v1/posts</code>
+        </pre>
+
+        <p>
+            To create new posts, do a post
     <p>
-      This is a placeholder page to show you the REST API.  Use <a href="https://httpie.org/">httpie</a> to post JSON to the application.
-    </p>
 
-    <p>
-      To see all posts, you can do a GET:
-    </p>
+        <pre>
+            <code>http POST localhost:9000/v1/posts title="Some title" body="Some Body"</code>
+        </pre>
 
+        <p>
+            You can always look at the API directly: <a href="/v1/posts">/v1/posts</a>
+        </p>
 
-<pre>
-    <code>http GET localhost:9000/v1/posts</code>
-</pre>
-
-    <p>
-      To create new posts, do a post
-    <p>
-
-<pre>
-    <code>http POST localhost:9000/v1/posts title="Some title" body="Some Body"</code>
-</pre>
-
-<p>
-  You can always look at the API directly: <a href="/v1/posts">/v1/posts</a>
-</p>
-
-  </body>
+    </body>
 </html>
 """))
       }
@@ -84,7 +85,7 @@ Seq[Any](format.raw/*2.1*/("""<!doctype html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/index.scala.html
-                  HASH: c33549a594a745eef61695f4a82791cd8968d529
+                  HASH: fc85dfe9f058f95b9201ef63394366477748f40c
                   MATRIX: 900->1|996->4
                   LINES: 27->1|32->2
                   -- GENERATED --

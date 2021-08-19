@@ -1,33 +1,33 @@
-package v1.model;
+package v1.ad;
 
-import models.Model;
+import models.Ad;
 import play.libs.Json;
 import play.libs.concurrent.HttpExecutionContext;
 import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Results;
-import services.ModelService;
+import services.AdService;
 
 import javax.inject.Inject;
 import java.util.List;
 import java.util.concurrent.CompletionStage;
 import java.util.stream.Collectors;
 
-public class ModelController extends Controller {
+public class AdController extends Controller {
 
     private HttpExecutionContext ec;
-    private ModelService handler;
+    private AdService handler;
 
     @Inject
-    public ModelController(HttpExecutionContext ec, ModelService handler) {
+    public AdController(HttpExecutionContext ec, AdService handler) {
         this.ec = ec;
         this.handler = handler;
     }
 
     public CompletionStage<Result> list(Http.Request request) {
         return handler.list(request).thenApplyAsync(models -> {
-            final List<Model> brandList = models.collect(Collectors.toList());
+            final List<Ad> brandList = models.collect(Collectors.toList());
             return ok(Json.toJson(brandList));
         }, ec.current());
     }

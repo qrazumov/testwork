@@ -5,6 +5,24 @@
 <mapper namespace="models">
 
     <select id="getModels" resultType="models.Model">
-        SELECT * FROM users
+        SELECT * FROM models
     </select>
+    <select id="getModelByID" resultType="models.Model" parameterType="long">
+        SELECT * FROM models WHERE ID = #{id}
+    </select>
+    <update id="updateModel" parameterType="models.Model">
+        UPDATE models SET
+                          NAME = #{name},
+                          START_PROD = #{start_prod},
+                          END_PROD = #{end_prod}
+        WHERE ID = #{id}
+    </update>
+    <delete id="deleteModelByID" parameterType="long">
+        DELETE FROM models WHERE ID = #{id}
+    </delete>
+    <insert id="create" parameterType="models.Model">
+        INSERT INTO models
+            (NAME, START_PROD, END_PROD)
+        VALUES (#{name}, #{start_prod}, #{end_prod});
+    </insert>
 </mapper>

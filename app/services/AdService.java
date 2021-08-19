@@ -1,35 +1,35 @@
 package services;
 
-import models.Brand;
+import models.Ad;
 import play.libs.concurrent.HttpExecutionContext;
 import play.mvc.Http;
-import repositories.brand.BrandRepository;
+import repositories.ad.AdRepository;
 
 import javax.inject.Inject;
 import java.util.Optional;
 import java.util.concurrent.CompletionStage;
 import java.util.stream.Stream;
 
-public class BrandService {
+public class AdService {
 
-    private final BrandRepository repository;
+    private final AdRepository repository;
     private final HttpExecutionContext ec;
 
     @Inject
-    public BrandService(BrandRepository repository, HttpExecutionContext ec) {
+    public AdService(AdRepository repository, HttpExecutionContext ec) {
         this.repository = repository;
         this.ec = ec;
     }
 
-    public CompletionStage<Stream<Brand>> list(Http.Request request) {
-        return repository.list().thenApplyAsync(brandStream -> brandStream, ec.current());
+    public CompletionStage<Stream<Ad>> list(Http.Request request) {
+        return repository.list().thenApplyAsync(m -> m, ec.current());
     }
 
-    public CompletionStage<Optional<Brand>> getByID(Http.Request request, String id) {
+    public CompletionStage<Optional<Ad>> getByID(Http.Request request, String id) {
         return repository.getByID(Long.parseLong(id)).thenApplyAsync(optionalData -> optionalData, ec.current());
     }
 
-    public CompletionStage<Optional<Brand>> updateByID(Http.Request request, String id) {
+    public CompletionStage<Optional<Ad>> updateByID(Http.Request request, String id) {
         return repository.updateByID(Long.parseLong(id), request).thenApplyAsync(
                 optionalData -> optionalData, ec.current()
         );
@@ -39,7 +39,7 @@ public class BrandService {
         return repository.deleteByID(Long.parseLong(id)).thenApplyAsync(optionalData -> optionalData, ec.current());
     }
 
-    public CompletionStage<Brand> create(Http.Request request) {
+    public CompletionStage<Ad> create(Http.Request request) {
         return repository.create(request).thenApplyAsync((s) -> s, ec.current());
     }
 

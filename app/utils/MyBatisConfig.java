@@ -38,7 +38,7 @@ public class MyBatisConfig {
 
     }
 
-    public SqlSessionFactory sqlSessionFactory(){
+    public SqlSessionFactory sqlSessionFactory() {
         String mybatisConfigPath = config.getString("mybatisConfigPath");
         Reader reader = null;
         SqlSessionFactory factory = null;
