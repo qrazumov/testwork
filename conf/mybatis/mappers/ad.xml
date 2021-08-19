@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ads">
+
+    <select id="getAds" resultType="models.Ad">
+        SELECT * FROM ads
+    </select>
+    <select id="getAdByID" resultType="models.Ad" parameterType="long">
+        SELECT * FROM ads WHERE ID = #{id}
+    </select>
+    <update id="updateAd" parameterType="models.Ad">
+        UPDATE ads SET
+                       BRAND_ID = #{brand_id},
+                       MODEL_ID = #{model_id},
+                       MILEAGE = #{mileage},
+                       PRICE = #{price}
+        WHERE ID = #{id}
+    </update>
+    <delete id="deleteAdByID" parameterType="long">
+        DELETE FROM ads WHERE ID = #{id}
+    </delete>
+    <insert id="create" parameterType="models.Ad">
+        INSERT INTO ads
+            (BRAND_ID, MODEL_ID, MILEAGE, PRICE)
+        VALUES (#{brand_id}, #{model_id}, #{mileage}, #{price});
+    </insert>
+</mapper>

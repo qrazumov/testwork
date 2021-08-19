@@ -1,0 +1,5 @@
+GET    /                     v1.model.ModelController.list(request:Request)
+POST   /                     v1.model.ModelController.create(request:Request)
+GET    /:id                 v1.model.ModelController.getByID(request:Request,id)
+PUT    /:id                 v1.model.ModelController.updateByID(request:Request, id)
+DELETE    /:id                 v1.model.ModelController.deleteByID(request:Request, id)

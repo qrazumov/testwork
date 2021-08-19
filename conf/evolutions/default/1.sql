@@ -1,0 +1,6 @@
+-- Users schema
+-- !Ups
+INSERT INTO PUBLIC.BRANDS (ID, NAME, COUNTRY, CREATED_AT)
+VALUES (1, 'ford', 'usa', '2021-08-18 13:58:16.460131');
+-- !Downs
+DROP TABLE BRANDS;
