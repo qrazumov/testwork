@@ -1,5 +1,0 @@
-GET    /                     v1.ad.AdController.list(request:Request)
-POST   /                     v1.ad.AdController.create(request:Request)
-GET    /:id                 v1.ad.AdController.getByID(request:Request,id)
-PUT    /:id                 v1.ad.AdController.updateByID(request:Request, id)
-DELETE    /:id                 v1.ad.AdController.deleteByID(request:Request, id)

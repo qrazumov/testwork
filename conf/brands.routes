@@ -1,5 +1,0 @@
-GET    /                     v1.brand.BrandController.list(request:Request)
-POST   /                     v1.brand.BrandController.create(request:Request)
-GET    /:id                 v1.brand.BrandController.getByID(request:Request,id)
-PUT    /:id                 v1.brand.BrandController.updateByID(request:Request, id)
-DELETE    /:id                 v1.brand.BrandController.deleteByID(request:Request, id)
