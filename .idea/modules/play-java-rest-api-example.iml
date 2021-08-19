@@ -31,6 +31,13 @@
       <excludeFolder url="file://$MODULE_DIR$/../../target/streams" />
       <excludeFolder url="file://$MODULE_DIR$/../../target/web" />
       <excludeFolder url="file://$MODULE_DIR$/../dataSources" />
+      <excludeFolder url="file://$MODULE_DIR$/../../target/scala-2.13/routes/main/v1/ad" />
+      <excludeFolder url="file://$MODULE_DIR$/../../target/scala-2.13/routes/main/v1/model" />
+      <excludeFolder url="file://$MODULE_DIR$/../../target/scala-2.13/routes/main/v1/post" />
+      <excludeFolder url="file://$MODULE_DIR$/../../target/scala-2.13/routes/main/ads" />
+      <excludeFolder url="file://$MODULE_DIR$/../../target/scala-2.13/routes/main/controllers" />
+      <excludeFolder url="file://$MODULE_DIR$/../../target/scala-2.13/routes/main/models" />
+      <excludeFolder url="file://$MODULE_DIR$/../../target/scala-2.13/routes/main/posts" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

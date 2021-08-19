@@ -1,0 +1,6 @@
+.idea/
+gatling/
+logs/
+project/
+sbt-dist/
+target/
