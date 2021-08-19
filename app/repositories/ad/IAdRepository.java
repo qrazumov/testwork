@@ -3,12 +3,13 @@ package repositories.ad;
 import models.Ad;
 import play.mvc.Http;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletionStage;
 import java.util.stream.Stream;
 
 public interface IAdRepository {
-    CompletionStage<Stream<Ad>> list();
+    CompletionStage<List> list(Http.Request request);
 
     CompletionStage<Optional<Ad>> getByID(Long id);
 

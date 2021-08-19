@@ -5,7 +5,11 @@
 <mapper namespace="ads">
 
     <select id="getAds" resultType="models.Ad">
-        SELECT * FROM ads
+        SELECT * FROM ads WHERE
+                    BRAND_ID = #{brand_id} AND
+                    MODEL_ID = #{model_id} AND
+                    MILEAGE = #{mileage} AND
+                    PRICE = #{price}
     </select>
     <select id="getAdByID" resultType="models.Ad" parameterType="long">
         SELECT * FROM ads WHERE ID = #{id}

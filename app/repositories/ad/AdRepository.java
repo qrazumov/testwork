@@ -14,13 +14,9 @@ import utils.MyBatisConfig;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import javax.persistence.EntityManager;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.CompletionStage;
 import java.util.function.Function;
-import java.util.stream.Stream;
 
 import static java.util.concurrent.CompletableFuture.supplyAsync;
 
@@ -43,17 +39,17 @@ public class AdRepository implements IAdRepository {
     }
 
     @Override
-    public CompletionStage<Stream<Ad>> list() {
-        return supplyAsync(() -> {
-            Stream<Ad> adStream = null;
+    public CompletionStage<List> list(Http.Request request) {
+        return supplyAsync(() -> wrap(em -> {
+            List listres = null;
             try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
-                List<Ad> ads = sqlSession.selectList("ads.getAds");
-                adStream = ads.stream();
+                String sqlRes = getSQlQueryForFilter(request);
+                listres = em.createNativeQuery(sqlRes, Ad.class).getResultList();
             } catch (Exception e) {
                 e.getStackTrace();
             }
-            return adStream;
-        }, ec);
+            return listres;
+        }), ec);
     }
 
     @Override
@@ -125,6 +121,20 @@ public class AdRepository implements IAdRepository {
 
     private <T> T wrap(Function<EntityManager, T> function) {
         return jpaApi.withTransaction(function);
+    }
+
+    private String getSQlQueryForFilter(Http.Request request){
+        Map<String, String[]> qMap = request.queryString();
+        StringBuilder sql = new StringBuilder("SELECT * FROM ads");
+        if(qMap.size() > 0){
+            sql.append(" WHERE ");
+            for (Map.Entry<String, String[]> entry : qMap.entrySet()) {
+                sql.append(entry.getKey() + " = " + entry.getValue()[0] + " AND ");
+            }
+            return sql.substring(0, sql.length() - 5);
+        }else{
+            return sql.toString();
+        }
     }
 
 }

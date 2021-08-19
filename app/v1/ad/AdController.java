@@ -27,8 +27,8 @@ public class AdController extends Controller {
 
     public CompletionStage<Result> list(Http.Request request) {
         return handler.list(request).thenApplyAsync(models -> {
-            final List<Ad> brandList = models.collect(Collectors.toList());
-            return ok(Json.toJson(brandList));
+            //final List brandList = models.stream().collect(Collectors.toList());
+            return ok(Json.toJson(models));
         }, ec.current());
     }
 
