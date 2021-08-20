@@ -3,7 +3,7 @@
 
 `. mybatis`
 
-`. h2 database`
+`. h2 database (;MODE=PostgreSQL)`
 
 get started
 
