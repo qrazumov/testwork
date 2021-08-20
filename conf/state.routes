@@ -1,0 +1,2 @@
+GET    /health                     v1.state.StateController.health(request:Request)
+GET    /version                     v1.state.StateController.version(request:Request)

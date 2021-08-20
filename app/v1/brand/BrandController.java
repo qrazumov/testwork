@@ -9,9 +9,11 @@ import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Results;
 import services.BrandService;
+import utils.ResponseFormat;
 
 import javax.inject.Inject;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.CompletionStage;
 import java.util.stream.Collectors;
 
@@ -29,7 +31,7 @@ public class BrandController extends Controller {
     public CompletionStage<Result> list(Http.Request request) {
         return handler.list(request).thenApplyAsync(brands -> {
             final List<Brand> brandList = brands.collect(Collectors.toList());
-            return ok(Json.toJson(brandList));
+            return ok(Json.toJson( ResponseFormat.format(brandList, Brand.class.getSimpleName().toLowerCase(Locale.ROOT)) ));
         }, ec.current());
     }
 

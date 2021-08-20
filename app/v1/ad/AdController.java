@@ -1,6 +1,5 @@
 package v1.ad;
 
-import models.Ad;
 import play.libs.Json;
 import play.libs.concurrent.HttpExecutionContext;
 import play.mvc.Controller;
@@ -10,10 +9,7 @@ import play.mvc.Results;
 import services.AdService;
 
 import javax.inject.Inject;
-import java.util.List;
 import java.util.concurrent.CompletionStage;
-import java.util.stream.Collectors;
-
 public class AdController extends Controller {
 
     private HttpExecutionContext ec;
@@ -26,9 +22,8 @@ public class AdController extends Controller {
     }
 
     public CompletionStage<Result> list(Http.Request request) {
-        return handler.list(request).thenApplyAsync(models -> {
-            //final List brandList = models.stream().collect(Collectors.toList());
-            return ok(Json.toJson(models));
+        return handler.list(request).thenApplyAsync(ads -> {
+            return ok(Json.toJson(ads));
         }, ec.current());
     }
 
