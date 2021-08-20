@@ -1,4 +1,4 @@
-###### test work non-blocking rest api
+# test work non-blocking rest api
 `. playframework`
 
 `. mybatis`
@@ -8,8 +8,12 @@
 get started
 
 `sbr run` command to compile project and start server
+# rest api (crud):
+**postman link test api**
 
-rest api (crud):
+https://www.getpostman.com/collections/b6668b7c9324ec4dae05
+
+**routes example**
 
  http://localhost:9000/v1/brands
 
